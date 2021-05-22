@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+  background: var(--white);
+  border-radius: 10px;
+  max-width: 200px;
+}
+
+.button {
+  border: none;
+  background: var(--white);
+  color: var(--text);
+  outline: transparent;
+  position: relative;
+  left: 120px;
+  top: -20px;
+  width: 48px;
+  height: 48px;
+  margin-bottom: -40px;
+}
+
+.container input.inputName {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--title);
+  border-bottom: none;
+}
+
+.container input {
+  margin: 0 0 1rem 0;
+  font-size: 1.25rem;
+  border: none;
+  border-bottom: 1px solid var(--gray-line);
+  outline: transparent;
+  width: 100%;
+  color: var(--text);
+}
