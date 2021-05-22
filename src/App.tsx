@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { BeerContextProvider } from "./components/BeerContext/BeerContextProvider";
+import { BeerContextProvider } from "./components/BeerContext";
 import useBeer from "./hooks/useBeer";
 
 import styles from "./styles/Beer.module.css";
@@ -20,8 +20,8 @@ const Beer: FC = () => {
 
         <div className={styles.footer}>
           <button onClick={addNewBeer}>Adicionar</button>
-          <button onClick={getLowest}>lowest</button>
-          <button onClick={resetBeer}>Reset</button>
+          <button onClick={getLowest}>Mais Barata</button>
+          <button onClick={resetBeer}>Resetar</button>
         </div>
       </main>
     </div>

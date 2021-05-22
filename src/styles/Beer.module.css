@@ -26,18 +26,42 @@
 }
 
 .footer button {
-  width: 120px;
-  height: 2.5rem;
+  width: 110px;
+  height: 2rem;
   border: 0;
   outline: none;
   border-radius: 5px;
   background: var(--title);
   color: var(--white);
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 @media (max-width: 1000px) {
+  .footer {
+    width: 50%;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer {
+    width: 60%;
+  }
+}
+
+@media (max-width: 800px) {
+  .footer {
+    width: 70%;
+  }
+}
+
+@media (max-width: 700px) {
+  .footer {
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
   .footer {
     width: 100%;
     flex-direction: column;
