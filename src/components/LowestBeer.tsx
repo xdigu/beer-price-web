@@ -16,7 +16,7 @@ const LowestBeer: FC = () => {
 
   return (
     <div className={styles.lowestBeer} style={{ opacity: lowestBeer ? 1 : 0 }}>
-      <p>A cerveja mais barata é {beerName}</p>
+      <p>{beerName} é a mais barata!</p>
     </div>
   );
 };

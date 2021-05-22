@@ -1,7 +1,7 @@
 import {
   useBeerState,
   useBeerDispatch,
-} from "../components/BeerContext/BeerContextProvider";
+} from "../components/BeerContext";
 import { getAphabetLetterByIndex } from "../utils/getAlphabetic";
 
 const useBeer = () => {
