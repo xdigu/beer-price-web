@@ -14,7 +14,7 @@ const BeerCard: FC<Props> = ({ beer }) => {
   const [togleName, setTogleName] = useState(false);
   const { name, price, volume, id } = beer;
 
-  console.log(name)
+  console.log(name);
 
   const togleChangeName = () => setTogleName(!togleName);
 
@@ -39,10 +39,11 @@ const BeerCard: FC<Props> = ({ beer }) => {
           x
         </button>
 
-        <label htmlFor={`name ${id}`}></label>
+        <label htmlFor={`name ${id}`} />
         <input
           className={styles.inputName}
           autoFocus
+          aria-label={`name ${id}`}
           name="name"
           id={`name ${id}`}
           onBlur={togleChangeName}
@@ -50,7 +51,7 @@ const BeerCard: FC<Props> = ({ beer }) => {
           onChange={_handleInputChange}
         />
 
-        <label htmlFor={`volume ${id}`}></label>
+        <label htmlFor={`volume ${id}`} />
 
         <input
           type=""
@@ -61,7 +62,7 @@ const BeerCard: FC<Props> = ({ beer }) => {
           onChange={_handleInputChange}
         />
 
-        <label htmlFor={`price ${id}`}></label>
+        <label htmlFor={`price ${id}`} />
 
         <input
           type="text"
