@@ -18,8 +18,8 @@ const useBeer = () => {
       payload: {
         addBeer: {
           name: `Cerveja ${getAphabetLetterByIndex(state.beerCount)}`,
-          volume: 0,
-          price: 0,
+          volume: null,
+          price: null,
         },
       },
     });
