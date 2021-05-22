@@ -1,0 +1,14 @@
+# build environment
+FROM mhart/alpine-node:latest as build
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+RUN ls -lha
+COPY . ./
+RUN npm run build
+
+# production environment
+FROM nginx:alpine
+COPY --from=build /app/build /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
