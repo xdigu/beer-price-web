@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { FC } from "react";
 
-function App() {
+import { BeerContextProvider } from "./components/BeerContext/BeerContextProvider";
+import useBeer from "./hooks/useBeer";
+
+import styles from "./styles/Beer.module.css";
+import Info from "./components/Info";
+import BeerWrapper from "./components/BeerWrapper";
+import LowestBeer from "./components/LowestBeer";
+
+const Beer: FC = () => {
+  const { addNewBeer, getLowest, resetBeer } = useBeer();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.container}>
+      <main className={styles.main}>
+        <Info />
+        <LowestBeer />
+        <BeerWrapper />
+
+        <div className={styles.footer}>
+          <button onClick={addNewBeer}>Adicionar</button>
+          <button onClick={getLowest}>lowest</button>
+          <button onClick={resetBeer}>Reset</button>
+        </div>
+      </main>
     </div>
   );
-}
+};
+
+const App: FC = () => {
+  return (
+    <BeerContextProvider>
+      <Beer />
+    </BeerContextProvider>
+  );
+};
 
 export default App;
